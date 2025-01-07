@@ -16,38 +16,16 @@ tqdm              4.65.0
 ```
 ## Examples on Training and Inference
 
-### Under GED metric
-To train and test on AIDS700nef.
 ```
 python src/main.py --gnn rggc --k 8 --epochs 30000 --use-pe --pe-dim 16
-```
-To train and test on IMDBMulti.
-```
-python src/main.py --gnn rggc --k 4 --epochs 30000 --dataset IMDBMulti --use-pe --pe-dim 16
-```
-To train and test on LINUX.
-```
-python src/main.py --k 8 --learning 0.002 --epochs 20000 --dataset LINUX --use-pe --pe-dim 10
-```
-To train and test on PTC.
-```
-python src/main.py --gnn rggc --k 8 --epochs 5000 --dataset PTC --use-pe --pe-dim 20
-```
-
-### Under MCS metric
-To train and test on AIDS700nef.
-```
 python src/main.py --gnn rggc --k 8 --epochs 30000 --use-pe --pe-dim 16 --metric mcs
 ```
-To train and test on IMDBMulti.
+
+## Reproductivity
+To reproduce our empirical results, run the ``run.sh`` script.
 ```
-python src/main.py --gnn rggc --k 4 --epochs 30000 --dataset IMDBMulti --use-pe --pe-dim 16 --metric mcs
+bash run.sh
 ```
-To train and test on LINUX.
-```
-python src/main.py --gnn rggc --k 8 --learning 0.002 --epochs 20000 --dataset LINUX --use-pe --pe-dim 10 --metric mcs
-```
-To train and test on PTC.
-```
-python src/main.py --gnn rggc --k 8 --epochs 20000 --dataset PTC --use-pe --pe-dim 20 --metric mcs
-```
+
+## Acknowledgement
+We thank [SimGNN](https://github.com/benedekrozemberczki/SimGNN) and [Extended-SimGNN](https://github.com/gospodima/Extended-SimGNN) for providing the core frameworks utilized in this implementation.
